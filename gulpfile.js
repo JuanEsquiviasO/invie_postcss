@@ -1,5 +1,6 @@
 var gulp = require('gulp')
 var postcss = require('gulp-postcss')
+var cssnext = require('postcss-cssnext')
 // var rucksack = require('rucksack-css')
 // var cssnext = require('postcss-cssnext')
 // var cssnested = require('postcss-nested')
@@ -24,8 +25,8 @@ gulp.task('serve', function () {
 // Tarea para procesar el CSS
 gulp.task('css', function () {
   var processors = [
-    autoprefixer({ browsers: ['> 5%', 'ie 8'] }),
-    cssnested
+    cssnested,
+    cssnext({ browsers: ['> 5%', 'ie 8'] })
     // atImport(),
     // mixins(),
     // cssnested,
