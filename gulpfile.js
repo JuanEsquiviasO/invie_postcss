@@ -8,6 +8,7 @@ var postcss = require('gulp-postcss')
 // var atImport = require('postcss-import')
 // var csswring = require('csswring')
 // var mqpacker = require('css-mqpacker')
+var cssnested = require('postcss-nested')
 var autoprefixer = require('autoprefixer')
 var browserSync = require('browser-sync').create()
 
@@ -23,7 +24,8 @@ gulp.task('serve', function () {
 // Tarea para procesar el CSS
 gulp.task('css', function () {
   var processors = [
-    autoprefixer({ browsers: ['> 5%', 'ie 8'] })
+    autoprefixer({ browsers: ['> 5%', 'ie 8'] }),
+    cssnested
     // atImport(),
     // mixins(),
     // cssnested,
