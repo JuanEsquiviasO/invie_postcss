@@ -8,6 +8,7 @@ var postcss = require('gulp-postcss')
 // var atImport = require('postcss-import')
 // var csswring = require('csswring')
 // var mqpacker = require('css-mqpacker')
+var autoprefixer = require('autoprefixer')
 var browserSync = require('browser-sync').create()
 
 // Servidor de desarrollo
@@ -22,6 +23,7 @@ gulp.task('serve', function () {
 // Tarea para procesar el CSS
 gulp.task('css', function () {
   var processors = [
+    autoprefixer({ browsers: ['> 5%', 'ie 8'] })
     // atImport(),
     // mixins(),
     // cssnested,
