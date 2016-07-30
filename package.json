@@ -1,0 +1,16 @@
+{
+  "name": "invie_postcss",
+  "version": "1.0.0",
+  "description": "app with PostcCss",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@JuanEsquiviasO",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.1"
+  }
+}
