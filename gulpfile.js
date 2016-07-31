@@ -10,7 +10,8 @@ var cssnext = require('postcss-cssnext')
 // var csswring = require('csswring')
 // var mqpacker = require('css-mqpacker')
 var cssnested = require('postcss-nested')
-var autoprefixer = require('autoprefixer')
+var mixins = require('postcss-mixins')
+var atImport = require('postcss-import')
 var browserSync = require('browser-sync').create()
 
 // Servidor de desarrollo
@@ -25,6 +26,8 @@ gulp.task('serve', function () {
 // Tarea para procesar el CSS
 gulp.task('css', function () {
   var processors = [
+    atImport(),
+    mixins(),
     cssnested,
     cssnext({ browsers: ['> 5%', 'ie 8'] })
     // atImport(),
@@ -37,7 +40,7 @@ gulp.task('css', function () {
     // csswring()
   ]
 
-  return gulp.src('./src/*.css')
+  return gulp.src('./src/invie.css')
     .pipe(postcss(processors))
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream())
