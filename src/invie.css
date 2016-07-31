@@ -52,7 +52,7 @@
   lost-utility: clearfix;
 
   &-column {
-    background-color: blue;
+    background-color: #FF394E;
     lost-column: 1/5;
 
     @media (--tablet) {
